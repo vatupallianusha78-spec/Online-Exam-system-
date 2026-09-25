@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Exam System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Online Exam System</h1>
+
+    <!-- Start Exam -->
+    <div id="start-screen">
+        <h2>Welcome to the Online Exam</h2>
+
+        <input 
+            type="text" 
+            id="studentName" 
+            placeholder="Enter your name"
+        >
+
+        <p>Questions: 5</p>
+        <p>Time: 5 Minutes</p>
+
+        <button onclick="startExam()">Start Exam</button>
+    </div>
+
+
+    <!-- Exam Section -->
+    <div id="exam-screen" class="hidden">
+
+        <div class="exam-header">
+            <span>
+                Student: <b id="displayName"></b>
+            </span>
+
+            <span>
+                Time Left: <b id="timer">05:00</b>
+            </span>
+        </div>
+
+
+        <form id="examForm">
+
+            <!-- Question 1 -->
+            <div class="question">
+                <p>1. What does HTML stand for?</p>
+
+                <label>
+                    <input type="radio" name="q1" value="a">
+                    Hyper Text Markup Language
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    High Text Machine Language
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    Hyper Tool Markup Language
+                </label>
+            </div>
+
+
+            <!-- Question 2 -->
+            <div class="question">
+                <p>2. Which language is used for styling web pages?</p>
+
+                <label>
+                    <input type="radio" name="q2" value="a">
+                    HTML
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="b">
+                    CSS
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="c">
+                    Python
+                </label>
+            </div>
+
+
+            <!-- Question 3 -->
+            <div class="question">
+                <p>3. Which language is used to make web pages interactive?</p>
+
+                <label>
+                    <input type="radio" name="q3" value="a">
+                    JavaScript
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="b">
+                    SQL
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="c">
+                    C
+                </label>
+            </div>
+
+
+            <!-- Question 4 -->
+            <div class="question">
+                <p>4. Which one is a programming language?</p>
+
+                <label>
+                    <input type="radio" name="q4" value="a">
+                    Python
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="b">
+                    HTML
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="c">
+                    CSS
+                </label>
+            </div>
+
+
+            <!-- Question 5 -->
+            <div class="question">
+                <p>5. Which symbol is used for comments in JavaScript?</p>
+
+                <label>
+                    <input type="radio" name="q5" value="a">
+                    //
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="b">
+                    ##
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="c">
+                    &lt;!-- --&gt;
+                </label>
+            </div>
+
+
+            <button type="button" onclick="submitExam()">
+                Submit Exam
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- Result Section -->
+    <div id="result-screen" class="hidden">
+
+        <h2>Exam Result</h2>
+
+        <p>
+            Student Name:
+            <b id="resultName"></b>
+        </p>
+
+        <h3 id="score"></h3>
+
+        <p id="percentage"></p>
+
+        <p id="resultMessage"></p>
+
+        <button onclick="restartExam()">
+            Take Exam Again
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+                          </html>
